@@ -6,5 +6,3 @@ for i in str.lower().split():
     if i == 'open':
         count = count + 1
 print(count)
-
-    
