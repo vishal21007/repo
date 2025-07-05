@@ -1,7 +1,8 @@
-#print a sting in reverse using for loop
-str="hello world"
+# str = 'hello world', change the value of string as per user input
+
+str='hello world'
+for i in range(len(str)):
+    print(str[i])
+
+str[10] = 'b'
 print(str)
-x=input("Enter the alphabet you want to change with d : ")
-for i in range(len(str)-1,-1,-1):
-
-
