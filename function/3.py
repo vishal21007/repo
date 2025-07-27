@@ -4,15 +4,18 @@ def mean(n):
     while i<=len(n)-1:
         count=count+n[i]
         i=i+1
-    print("The mean of the list is : ",count/len(n))
+    print("The mean of the list is : ",int(count/len(n)))
+
 def median(n):
-    me=(len(n))/2
-    mee=(len(n+1))/2
-    i=1
-    while i<=len(n)-1:
-        if i%2==0:
-            print(n[me])
-        
+    if len(n)%2 == 0:
+        middle_value = int(len(n)/2)
+    else:
+        middle_value = int((len(n)+1)/2)
+    n.sort()
+    print('Median Value of List : ',n[middle_value])
+
+
 lst=[1.4,2.4,3.5,6.9,7.3,1.4]
+print(lst)
 mean(lst)
 median(lst)
