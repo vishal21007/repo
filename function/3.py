@@ -1,3 +1,13 @@
+def mode(n):
+    count=0
+    i=1
+    x=n.sort
+    while i<=len(n):
+        if n[i] in x:
+            count = count+1
+            i = i + 1
+    print("The mode of the lst is :",count )
+
 def mean(n):
     i=1
     count=0
@@ -19,3 +29,4 @@ lst=[1.4,2.4,3.5,6.9,7.3,1.4]
 print(lst)
 mean(lst)
 median(lst)
+mode(lst)
