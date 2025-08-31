@@ -1,0 +1,5 @@
+x=int(input("Enter the working days of A : "))
+y=int(input("Enter the worling days of B : "))
+z=int(input("Enter the working days of C : "))
+wo=(x*z*y)/((x*y)+(y*z)+(z*x))
+print(int(wo))
