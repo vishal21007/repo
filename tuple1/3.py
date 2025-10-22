@@ -5,16 +5,21 @@ DISPLAY : MAIN TMARKS NAME AVG
 MERIT LIST : DISPLAY ALL STUDENTS GETTING AVG ABOVE 74
 SEARCH : ACCEPT NAMR DISLAY DETAILS FO STUDENT  """
 
-n=int(input("Enter no. of students :"))
+n=int(input("Enter no. of students : "))
 tp=()
-for i in range(1,n+1):
-    tp1=()
-    ro=int(input("Enter roll number of the student ",i,":"))
-    tp1=tp1+(ro,)
-    nm=input("Enter name of the student ",i,": ")
+tp1()
+for i in range(n):
+
+    nm=input("Enter name of the student : ")
     tp1=tp1+(nm,)
-    m=int(input("Enter total marks of the student out of 300 : "))
+    m=int(input("Enter total marks of the student out of 500 : "))
     tp1=tp1+(m,)
+    av=(m/500)*100
+    tp1=tp1+(av,)
+    if av >= 33:
+        tp1=tp1+("pass",)
+    else:
+        tp1=tp1+("Fail",)
     tp=(tp1,)
 print(tp)
 
@@ -26,11 +31,7 @@ while True:
     print("press 0 : To Exit")
     ch=int(input("Enter your choise : "))
     if ch == 1 :
-        for j in tp:
-            if type(j)==int:
-                if j/300<93:
-                    print("Student",j,"is pass")
-                else:
-                    print("Student",j,"is Fail")
-            else:
-                continue
+        for i in tp:
+            print(i)
+    elif ch==0:
+        break

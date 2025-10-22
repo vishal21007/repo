@@ -1,0 +1,8 @@
+a=(5,(10,(30,(40))))
+print(len(a))
+print(a[1][0])
+print(10 in a)
+b =(100,(200,(300,),400),500)
+print(len(b))
+print(len(b[1]))
+print(b[0]+500)
