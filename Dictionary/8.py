@@ -68,3 +68,7 @@ while True:
             sum = sum + (value*no1)
             print("Total values is : ",values*no1)
         print("Total amount is  : ",sum)
+    elif ch==5:
+        break
+    else:
+        print("Invalid input !!!")
