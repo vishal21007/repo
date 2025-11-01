@@ -6,27 +6,30 @@ def inventory():
     n=int(input("Enter no. of products : "))
     pro_sales={}
     for i in range(n):
-        nm=input("Enter product name : ")
+        nm=input("Enter product name : ").lower()
         pri=int(input("Enter price of the product : "))
         pro_sales[nm]=pri
-        return pro_sales
+    return pro_sales
 
 """ program to store details os customer name and mobile number """
 def c_details():
     n1=int(input("Enter no. of customers : "))
     c_dict={}
-    for i1 in range(n1):
-        nm1=input("Enter name of the customer : ")
+    for i in range(n1):
+        nm1=input("Enter name of the customer : ").lower()
         num=int(input("Enter mobile no. of the customer : "))
-        c_dict[nm1]=num
-        return c_dict
+        if len(num)==10:
+            c_dict[nm1]=num
+        else:
+            print("Invalid mobile no. !!!")
+    return c_dict
 
 """program to search product name with the values and customer name with the mobile number"""
 
 
-****** Inventory Menu ******
-while True:        
 
+while True:        
+    print("****** Inventory Menu ******")
     print("Press 1 : Inventory Entires (Products)")
     print("Press 2 : Enter Customer Detail")
     print("Press 3 : Search Product or Customer Details")
@@ -44,20 +47,24 @@ while True:
         print("press 2 : to get customer details ")
         ch1=int(input("Enter your choice : "))
         if ch1==1:
-            po=input("Enter the product name you want to search : ")
+            po=input("Enter the product name you want to search : ").lower()
             for keys,values in inve.items():
-                for j in keys:
-                    if po==j:
-                        print(inve[j])
+                if po in keys:
+                    print(inve[po])
         elif ch1==2:
-            nm1=input("Enter name of the customer : ")
+            nm1=input("Enter name of the customer : ").lower()
             for keys, values in cum.items():
-                for j in keys:
-                    if nm1==j:
-                        print(cum[j])
+                if nm1 in keys:
+                    print(cum[nm1])
     elif ch==4:
-        
-        po=input("Enter the product name you want to search : ")
+        sum=0
+        n1=int(input("Enter no. of different product : "))
+        for i in range(n1):
+            po=input("Enter the product name you want to search : ").lower()
+            no1=int(input("Enter no. of products : "))
             for keys,values in inve.items():
-                for j in keys:
-                    if po==j:
+                if po in keys:
+                    value = inve[po]
+            sum = sum + (value*no1)
+            print("Total values is : ",values*no1)
+        print("Total amount is  : ",sum)
