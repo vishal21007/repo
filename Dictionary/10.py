@@ -1,4 +1,8 @@
+
 print("===== SCHOOL MANAGEMENT SYSTEM =====")
+# s_dict={admission : [name, roll_no, phn_no, english_marks, maths_marks, science_marks]}
+s_dict = { 101:['abc1',1, "0123456789", 50, 60, 80],102:['abc2',2,"0123456789", 60, 65, 70],103:['abc3',3,"0123456789", 40, 50, 87] }
+
 while True:
     print("1. Add Student")
     print("2. Display All Students")
@@ -8,8 +12,7 @@ while True:
     print("6. Show Result Summary")
     print("7. Exit")
     ch=int(input("Enter your choice : "))
-    if ch == 1 : 
-        s_dict={}
+    if ch == 1 :
         n=int(input("Enter number of students : "))
         for i in range(n):
             lst=[]
@@ -36,17 +39,25 @@ while True:
             adsn1=int(input("Enter your admission number : "))
             if adsn1 in s_dict:
                 mrk=int(input("Enter your marks in English : "))
-                lst1.append(mrk)
+                lst.append(mrk)
                 mrk1=int(input("Enter your marks in Maths : "))
-                lst1.append(mrk1)
+                lst.append(mrk1)
                 mrk2=int(input("Enter your marks in science : "))
-                lst1.append(mrk2)
-                lst.append(lst1)
-                s_dict[adsn1]=lst
+                lst.append(mrk2)
         print(s_dict)
     elif ch == 5: 
         adsn1=int(input("Enter your admission number : "))
         s_dict.pop(adsn1)
     elif ch == 6 :
+        print("Name \t Roll No. \t Mobile \t English \t  Maths \t Science \t  Total marks \t Total percantage")
         for keys , values in s_dict.items():
-            
+            s=sum(values[3:5+1])
+            pr=(s/300)*100
+            for j in range(len(values)):
+                print(values[0] ,"\t ", values[1] ,"\t ", values[2] ,"\t ", values[3] ,"\t ", values[4] ,"\t ", values[5] ,"\t ", s ,"\t ", int(pr))
+                break
+
+    elif ch==7:
+        break
+    else:
+        print("Invalid input !!!")
