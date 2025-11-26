@@ -1,4 +1,4 @@
-#area module : circlr_area(),square_area(),rectangle_area()
+# area module : circlr_area(),square_area(),rectangle_area()
 import area 
 r=int(input("Enter radious of the circle : "))
 print(area.circle_area(r))
