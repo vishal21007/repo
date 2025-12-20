@@ -46,4 +46,4 @@ if cu>us:
 elif cu<us:
     print("USer wins the Game")
 else:
-    print("Both Computer and User got same score \nGame is a Draw")
+    print("Both Computer and User got same score \n Game is a Draw")
