@@ -1,5 +1,7 @@
 # High card game 
+
 import random
+
 dec={1:"2",2:"3",3:"4",4:"5",5:"6",6:"7",7:"8",8:"9",9:"10",10:'Jack',11:'Queen',12:'King',13:'Ace'}
 
 def single_play(): # single round game
@@ -54,7 +56,7 @@ elif gm == 2:
         if dec[com] not in comp:
             comp.append(dec[com]) 
             b=b+1     
-        if b==5 and b1==5:
+        if b>=5 and b1>=5:
             break
     round=1
     
