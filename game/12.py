@@ -1,3 +1,4 @@
+# Two-Player Dice Guessing Game
 
 import random
 dic={}
