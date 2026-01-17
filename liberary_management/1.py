@@ -34,7 +34,7 @@ while True:
     elif ch ==3:
         student_name=input("Enter name of the student : ")
         book_code=int(input("Enter book code to issue : "))
-        student_class=input("Enter class fo student : ")
+        student_class=input("Enter class of student : ")
         if book_code in Liberary:
             Book_issued[Liberary[book_code]]=[student_name,student_class]
             print(Liberary[book_code]," Book issued to",student_name," of ",student_class)
@@ -65,7 +65,7 @@ while True:
             print("The book has been deleted ")
         else:
             print("Book not in liberayr\n")    
-    elif ch == 8:
+    elif ch == 7:
         break
     else:
         print("Invalid input !!!!")
